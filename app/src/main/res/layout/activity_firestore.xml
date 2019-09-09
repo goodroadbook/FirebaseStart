@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".firestore.FirestoreActivity">
+
+    <Button
+        android:id="@+id/firestoreadddatabtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="데이터 추가"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/firestoresetdatabtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/firestoresetdatabtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="데이터 추가 (Set)"
+        app:layout_constraintTop_toBottomOf="@+id/firestoreadddatabtn"
+        app:layout_constraintBottom_toTopOf="@+id/firestoredeletedocbtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/firestoredeletedocbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="데이터 삭제 (문서)"
+        app:layout_constraintTop_toBottomOf="@+id/firestoresetdatabtn"
+        app:layout_constraintBottom_toTopOf="@+id/firestoredeletefieldbtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/firestoredeletefieldbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="데이터 삭제 (필드)"
+        app:layout_constraintTop_toBottomOf="@+id/firestoredeletedocbtn"
+        app:layout_constraintBottom_toTopOf="@+id/firestoreseldatabtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/firestoreseldatabtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="데이터 조회 (문서)"
+        app:layout_constraintTop_toBottomOf="@+id/firestoredeletefieldbtn"
+        app:layout_constraintBottom_toTopOf="@+id/firestoreselwheredatabtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/firestoreselwheredatabtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="데이터 조회 (문서 - where)"
+        app:layout_constraintTop_toBottomOf="@+id/firestoreseldatabtn"
+        app:layout_constraintBottom_toTopOf="@+id/firestorelistenerdatabtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/firestorelistenerdatabtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="데이터 조회 (실시간 업데이트)"
+        app:layout_constraintTop_toBottomOf="@+id/firestoreselwheredatabtn"
+        app:layout_constraintBottom_toTopOf="@+id/firestorelistenerquerydatabtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/firestorelistenerquerydatabtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="데이터 조회 (실시간 업데이트 - 쿼리)"
+        app:layout_constraintTop_toBottomOf="@+id/firestorelistenerdatabtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

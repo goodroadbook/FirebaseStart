@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/firebaseauthbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Firebase Authentication"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/firebaserealtimedbbtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/firebaserealtimedbbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Firebase Real Time DB"
+        app:layout_constraintTop_toBottomOf="@+id/firebaseauthbtn"
+        app:layout_constraintBottom_toTopOf="@+id/firebasecloudfirestorebtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/firebasecloudfirestorebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Firebase Cloud Firestore"
+        app:layout_constraintTop_toBottomOf="@+id/firebaserealtimedbbtn"
+        app:layout_constraintBottom_toTopOf="@+id/firebasecloudstoragebtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/firebasecloudstoragebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Firebase Cloud Storage"
+        app:layout_constraintTop_toBottomOf="@+id/firebasecloudfirestorebtn"
+        app:layout_constraintBottom_toTopOf="@id/firebasehostingbtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/firebasehostingbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Firebase Hosting"
+        app:layout_constraintTop_toBottomOf="@+id/firebasecloudstoragebtn"
+        app:layout_constraintBottom_toTopOf="@id/firebasecrashlyticsbtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/firebasecrashlyticsbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Firebase Crashlytics"
+        app:layout_constraintTop_toBottomOf="@+id/firebasehostingbtn"
+        app:layout_constraintBottom_toTopOf="@+id/firebaseperformancebtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/firebaseperformancebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Firebase Performance Monitoring"
+        app:layout_constraintTop_toBottomOf="@+id/firebasecrashlyticsbtn"
+        app:layout_constraintBottom_toTopOf="@id/firebasecloudmessagingbtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/firebasecloudmessagingbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Firebase Cloud Messaging"
+        app:layout_constraintTop_toBottomOf="@+id/firebaseperformancebtn"
+        app:layout_constraintBottom_toTopOf="@+id/firebaseremoteconfigbtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/firebaseremoteconfigbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Firebase Remote Config"
+        app:layout_constraintTop_toBottomOf="@+id/firebasecloudmessagingbtn"
+        app:layout_constraintBottom_toTopOf="@+id/firebasedynamiclinksbtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/firebasedynamiclinksbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Firebase Dynamic Links"
+        app:layout_constraintTop_toBottomOf="@+id/firebaseremoteconfigbtn"
+        app:layout_constraintBottom_toTopOf="@+id/firebaseAnalyticsbtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/firebaseAnalyticsbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Firebase Analytics"
+        app:layout_constraintTop_toBottomOf="@+id/firebasedynamiclinksbtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

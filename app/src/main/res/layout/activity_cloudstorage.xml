@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".cloudstorage.CloudStorageActivity">
+
+    <Button
+        android:id="@+id/uploadbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="파일 업로드"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/downloadbtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/downloadbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="파일 다운로드"
+        app:layout_constraintTop_toBottomOf="@+id/uploadbtn"
+        app:layout_constraintBottom_toTopOf="@+id/metainfobtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/metainfobtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="메타 데이터 사용하기"
+        app:layout_constraintTop_toBottomOf="@+id/downloadbtn"
+        app:layout_constraintBottom_toTopOf="@+id/deletebtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/deletebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="파일 삭제"
+        app:layout_constraintTop_toBottomOf="@+id/metainfobtn"
+        app:layout_constraintBottom_toTopOf="@+id/filelistbtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/filelistbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="파일 리스트"
+        app:layout_constraintTop_toBottomOf="@+id/deletebtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

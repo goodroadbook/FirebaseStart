@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.goodroadbook.firebasestart">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".analytics.ThreeActivity"></activity>
+        <activity android:name=".analytics.TwoActivity" />
+        <activity android:name=".analytics.OneActivity" />
+        <activity android:name=".analytics.AnalyticsActivity" />
+        <activity android:name=".dynamiclink.CActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="test2.com"
+                    android:scheme="myapp" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".dynamiclink.BActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="test1.com"
+                    android:scheme="http" />
+                <data
+                    android:host="test1.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".dynamiclink.AActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="firebasestart.page.link"
+                    android:scheme="http" />
+                <data
+                    android:host=" firebasestart.page.link"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".dynamiclink.DynamicLinkActivity" />
+        <activity android:name=".remoteconfig.RemoteConfigActivity" />
+        <activity android:name=".cloudmessaging.CloudMessagingActivity" /> <!-- fcm default icon -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" /> <!-- fcm default notification channel id -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="1" />
+
+        <activity android:name=".perfromance.PerformanceActivity" />
+        <activity android:name=".crashlytics.CrashlyticsActivity" />
+        <activity android:name=".hosting.HostingActivity" />
+        <activity android:name=".cloudstorage.FileListActivity" />
+        <activity android:name=".cloudstorage.MetaInfoActivity" />
+        <activity android:name=".cloudstorage.DownloadActivity" />
+        <activity android:name=".cloudstorage.UploadActivity" />
+        <activity android:name=".cloudstorage.CloudStorageActivity" />
+        <activity android:name=".firestore.FirestoreActivity" />
+        <activity android:name=".realtimedb.MemoActivity" />
+        <activity android:name=".authentication.SignedInActivity" />
+        <activity android:name=".authentication.FirebaseUIActivity" />
+        <activity android:name=".authentication.AuthActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".cloudmessaging.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
